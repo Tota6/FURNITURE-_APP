@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/recommended_furiture.dart';
+import 'package:furniture_app/theme.dart';
 import 'package:furniture_app/title_with_btn.dart';
 import 'header_with_searchbar.dart';
 
@@ -31,49 +32,11 @@ class _MyHomePageState extends State<MyHomePage> {
               title: 'Recommend',
               press: () {},
             ),
-            //it will cover 40% of the screen
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  RecommendedFurnitureCard(
-                    country: 'Russin',
-                    image: 'assets/chair2.jpg',
-                    title: 'samntha',
-                    price: 250,
-                    press: () {},
-                  ),
-                  RecommendedFurnitureCard(
-                    country: 'America',
-                    image: 'assets/fotii.jpg',
-                    title: 'White Sofa',
-                    price: 450,
-                    press: () {},
-                  ),
-                  RecommendedFurnitureCard(
-                    country: 'Egypt',
-                    image: 'assets/pink_foty.jpg',
-                    title: 'Pink Sofa',
-                    price: 560,
-                    press: () {},
-                  ),
-                  RecommendedFurnitureCard(
-                    country: 'Usa',
-                    image: 'assets/white_chair.jpg',
-                    title: 'White Chair',
-                    price: 300,
-                    press: () {},
-                  ),
-                  RecommendedFurnitureCard(
-                    country: 'Usa',
-                    image: 'assets/chair.jpg',
-                    title: 'Yellow Chair',
-                    price: 700,
-                    press: () {},
-                  ),
-                ],
-              ),
-            )
+            const RecommendedFurniture(),
+            TitleWithBtn(
+              title: 'Furniture Features',
+              press: () {},
+            ),
           ],
         ),
       ),

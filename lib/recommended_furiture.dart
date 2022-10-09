@@ -1,6 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/theme.dart';
 
+class RecommendedFurniture extends StatelessWidget {
+  const RecommendedFurniture({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          RecommendedFurnitureCard(
+            country: 'Russin',
+            image: 'assets/chair2.jpg',
+            title: 'samntha',
+            price: 250,
+            press: () {},
+          ),
+          RecommendedFurnitureCard(
+            country: 'America',
+            image: 'assets/fotii.jpg',
+            title: 'White Sofa',
+            price: 450,
+            press: () {},
+          ),
+          RecommendedFurnitureCard(
+            country: 'Egypt',
+            image: 'assets/pink_foty.jpg',
+            title: 'Pink Sofa',
+            price: 560,
+            press: () {},
+          ),
+          RecommendedFurnitureCard(
+            country: 'Usa',
+            image: 'assets/white_chair.jpg',
+            title: 'White Chair',
+            price: 300,
+            press: () {},
+          ),
+          RecommendedFurnitureCard(
+            country: 'Usa',
+            image: 'assets/chair.jpg',
+            title: 'Yellow Chair',
+            price: 700,
+            press: () {},
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class RecommendedFurnitureCard extends StatelessWidget {
   const RecommendedFurnitureCard({
     Key? key,
