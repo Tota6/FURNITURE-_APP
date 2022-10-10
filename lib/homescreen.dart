@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/recommended_furiture.dart';
-import 'package:furniture_app/theme.dart';
 import 'package:furniture_app/title_with_btn.dart';
+import 'buttom_nav_bar.dart';
+import 'furniture_feature.dart';
 import 'header_with_searchbar.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -37,9 +38,11 @@ class _MyHomePageState extends State<MyHomePage> {
               title: 'Furniture Features',
               press: () {},
             ),
+            FurnitureFeature()
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }

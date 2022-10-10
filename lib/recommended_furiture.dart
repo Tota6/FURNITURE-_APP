@@ -72,7 +72,7 @@ class RecommendedFurnitureCard extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.only(
-        bottom: kDefultPadding * 2.5,
+        bottom: kDefultPadding * 2.0,
         top: kDefultPadding / 2,
         left: kDefultPadding,
       ),
