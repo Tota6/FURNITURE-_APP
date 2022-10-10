@@ -13,7 +13,8 @@ class TitleWithBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefultPadding / 2),
+      padding: const EdgeInsets.symmetric(
+          horizontal: kDefultPadding / 2, vertical: kDefultPadding / 3),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -58,7 +59,9 @@ class TitleWithUnderLine extends StatelessWidget {
         //  alignment = AlignmentDirectional.topStart,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(left: kDefultPadding / 9, top: 0.0),
+            padding: const EdgeInsets.only(
+              left: kDefultPadding / 9,
+            ),
             child: Text(
               text,
               style: const TextStyle(
