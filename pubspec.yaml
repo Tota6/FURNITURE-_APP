@@ -67,6 +67,10 @@ flutter:
     - assets/pink_foty.jpg
     - assets/search.png
     - assets/white_chair.jpg
+    - assets/bell.png
+    - assets/heart.png
+    - assets/shopping-bag.png
+
 
 
   #   - images/a_dot_ham.jpeg
