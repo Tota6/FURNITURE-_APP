@@ -8,6 +8,8 @@ import 'header_with_searchbar.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
+  static String routeName = "/MyHomePage";
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -33,16 +35,16 @@ class _MyHomePageState extends State<MyHomePage> {
               title: 'Recommend',
               press: () {},
             ),
-            const RecommendedFurniture(),
+            RecommendedFurniture(),
             TitleWithBtn(
               title: 'Furniture Features',
               press: () {},
             ),
-            FurnitureFeature()
+            const FurnitureFeature()
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/components/details.dart';
 import 'package:furniture_app/theme.dart';
 
 class RecommendedFurniture extends StatelessWidget {
@@ -17,35 +18,55 @@ class RecommendedFurniture extends StatelessWidget {
             image: 'assets/chair2.jpg',
             title: 'samntha',
             price: 250,
-            press: () {},
+            press: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => DetailsScreen()),
+              );
+            },
           ),
           RecommendedFurnitureCard(
             country: 'America',
             image: 'assets/fotii.jpg',
             title: 'White Sofa',
             price: 450,
-            press: () {},
+            press: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => DetailsScreen()),
+              );
+            },
           ),
           RecommendedFurnitureCard(
             country: 'Egypt',
             image: 'assets/pink_foty.jpg',
             title: 'Pink Sofa',
             price: 560,
-            press: () {},
+            press: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => DetailsScreen()),
+              );
+            },
           ),
           RecommendedFurnitureCard(
             country: 'Usa',
             image: 'assets/white_chair.jpg',
             title: 'White Chair',
             price: 300,
-            press: () {},
+            press: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => DetailsScreen()),
+              );
+            },
           ),
           RecommendedFurnitureCard(
             country: 'Usa',
             image: 'assets/chair.jpg',
             title: 'Yellow Chair',
             price: 700,
-            press: () {},
+            press: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => DetailsScreen()),
+              );
+            },
           ),
         ],
       ),
@@ -65,8 +86,8 @@ class RecommendedFurnitureCard extends StatelessWidget {
 
   final String image, country, title;
   final int price;
-  final Function press;
-
+  //important to make it void call back to not use it as a dynamic function
+  final VoidCallback press;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -86,7 +107,7 @@ class RecommendedFurnitureCard extends StatelessWidget {
             height: 150,
           ),
           GestureDetector(
-            onTap: press(),
+            onTap: press,
             child: Container(
               padding: const EdgeInsets.all(kDefultPadding / 2),
               decoration: BoxDecoration(
@@ -116,7 +137,7 @@ class RecommendedFurnitureCard extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '$country'.toUpperCase(),
+                          text: country.toUpperCase(),
                           style: TextStyle(
                             color: kPrimaryColor.withOpacity(0.5),
                           ),
@@ -130,7 +151,7 @@ class RecommendedFurnitureCard extends StatelessWidget {
                     style: Theme.of(context).textTheme.button!.copyWith(
                           color: Colors.green,
                         ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -140,3 +161,139 @@ class RecommendedFurnitureCard extends StatelessWidget {
     );
   }
 }
+
+// class RecommendedFurniture extends StatelessWidget {
+//   const RecommendedFurniture({
+//     Key? key,
+//   }) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return SingleChildScrollView(
+//       scrollDirection: Axis.horizontal,
+//       child: Row(
+//         children: <Widget>[
+//           RecommendedFurnitureCard(
+//             image: "assets/chair2.jpg",
+//             title: "Samantha",
+//             country: "Russia",
+//             price: 440,
+//             press: () {
+//               Navigator.push(
+//                 context,
+//                 MaterialPageRoute(
+//                   builder: (context) => DetailsScreen(),
+//                 ),
+//               );
+//             },
+//           ),
+//           RecommendedFurnitureCard(
+//             image: "assets/chair2.jpg",
+//             title: "Angelica",
+//             country: "Russia",
+//             price: 440,
+//             press: () {
+//               Navigator.push(
+//                 context,
+//                 MaterialPageRoute(
+//                   builder: (context) => DetailsScreen(),
+//                 ),
+//               );
+//             },
+//           ),
+//           RecommendedFurnitureCard(
+//             image: "assets/chair2.jpg",
+//             title: "Samantha",
+//             country: "Russia",
+//             price: 440,
+//             press: () {},
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// class RecommendedFurnitureCard extends StatelessWidget {
+//   const RecommendedFurnitureCard({
+//     Key? key,
+//     required this.image,
+//     required this.title,
+//     required this.country,
+//     required this.price,
+//     required this.press,
+//   }) : super(key: key);
+
+//   final String image, title, country;
+//   final int price;
+//   final VoidCallback press;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     Size size = MediaQuery.of(context).size;
+//     return Container(
+//       margin: EdgeInsets.only(
+//         left: kDefultPadding,
+//         top: kDefultPadding / 2,
+//         bottom: kDefultPadding * 2.5,
+//       ),
+//       width: size.width * 0.4,
+//       child: Column(
+//         children: <Widget>[
+//           Image.asset(image),
+//           GestureDetector(
+//             onTap: press,
+//             child: Container(
+//               padding: EdgeInsets.all(kDefultPadding / 2),
+//               decoration: BoxDecoration(
+//                 color: Colors.white,
+//                 borderRadius: BorderRadius.only(
+//                   bottomLeft: Radius.circular(10),
+//                   bottomRight: Radius.circular(10),
+//                 ),
+//                 boxShadow: [
+//                   BoxShadow(
+//                     offset: Offset(0, 10),
+//                     blurRadius: 50,
+//                     color: kPrimaryColor.withOpacity(0.23),
+//                   ),
+//                 ],
+//               ),
+//               child: Row(
+//                 children: [
+//                   RichText(
+//                     text: TextSpan(
+//                       children: [
+//                         TextSpan(
+//                           text: '$title\n'.toUpperCase(),
+//                           // ignore: prefer_const_constructors
+//                           style: TextStyle(
+//                             color: Colors.black,
+//                             fontWeight: FontWeight.bold,
+//                           ),
+//                         ),
+//                         TextSpan(
+//                           text: country.toUpperCase(),
+//                           style: TextStyle(
+//                             color: kPrimaryColor.withOpacity(0.5),
+//                           ),
+//                         ),
+//                       ],
+//                     ),
+//                   ),
+//                   const Spacer(),
+//                   Text(
+//                     '\$$price',
+//                     style: Theme.of(context).textTheme.button!.copyWith(
+//                           color: Colors.green,
+//                         ),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           )
+//         ],
+//       ),
+//     );
+//   }
+// }

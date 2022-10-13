@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:furniture_app/components/details.dart';
 import 'package:furniture_app/homescreen.dart';
+import 'package:furniture_app/rout_generator.dart';
 import 'package:furniture_app/theme.dart';
 
 void main() {
@@ -20,7 +21,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
       ),
-      home: const MyHomePage(),
+      // home: const MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyHomePage(),
+        'DetailsScreen': (context) => DetailsScreen()
+      },
     );
   }
 }

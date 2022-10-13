@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/components/details.dart';
 import 'package:furniture_app/theme.dart';
 
 class FurnitureFeature extends StatelessWidget {
@@ -39,6 +40,7 @@ class FurnitureFeatureCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
+      onTap: press(),
       child: Container(
         margin: const EdgeInsets.only(
           left: kDefultPadding,
