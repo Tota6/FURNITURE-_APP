@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
               title: 'Recommend',
               press: () {},
             ),
-            RecommendedFurniture(),
+            const RecommendedFurniture(),
             TitleWithBtn(
               title: 'Furniture Features',
               press: () {},

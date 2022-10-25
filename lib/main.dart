@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/components/details.dart';
 import 'package:furniture_app/homescreen.dart';
-import 'package:furniture_app/rout_generator.dart';
 import 'package:furniture_app/theme.dart';
 
 void main() {
